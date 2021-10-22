@@ -7,9 +7,7 @@
 
     {%- if page_paths -%}
       <nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
+          <span class="menu-icon" onclick="openNav()">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="21" viewBox="0 0 28 21">
               <g id="Group_4" data-name="Group 4" transform="translate(-307.5 -24)">
                 <line id="Line_1" data-name="Line 1" x2="22" transform="translate(309 43.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3"/>
@@ -18,10 +16,8 @@
               </g>
             </svg>
           </span>
-        </label>
 
-        
-        <div class="trigger">
+        <div class="nav-list">
           <ul>
             {%- for path in page_paths -%}
               {%- assign my_page = site.pages | where: "path", path | first -%}
