@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap');
 
 $home_padding_bottom : 1.5rem;
 
@@ -6,7 +6,7 @@ body {
     margin: 0;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
+    
 
 }
 
@@ -30,11 +30,14 @@ img {
 .site-header {
     background-color: #000630;
     z-index: 10;
-
+    a:hover,
+    a:focus {
+        color: #C1F4FF;
+    }
     .site-title {
         color: white;
         font-size: 1.2em;
-        font-weight: bold;
+        font-weight: 800;
         letter-spacing: 0.4rem;
     }
 
@@ -59,9 +62,14 @@ img {
             display: block;
         }
 
-        .menu-icon svg {
+        #menu-icon {
             display: block;
-            transform: scale(1.1);
+            transform: scale(1.2);
+            fill: black;
+
+        }
+        #menu-icon:hover {
+            fill: #C1F4FF;
         }
 
         .nav-list {
@@ -86,7 +94,7 @@ img {
     padding: 4em 0em;
     position: relative;
     height: 100vh;
-
+    overflow: hidden;
 
     .hero_title {
         position: absolute;
@@ -146,8 +154,22 @@ img {
         position: absolute;
         top: -30vh;
         left: -80vw;
-
+       
     }
+}
+
+.glow  {
+    background-color: #ca0087c6;
+    position: absolute;
+    top: 20vh;
+    left: -12vh;
+    width: 130%;
+    height: 40px;
+
+    transform: rotate(-25deg);
+    filter: blur(100px);
+    
+
 }
 
 .overlay {
@@ -157,8 +179,8 @@ img {
     z-index: 11;
     left: 100%;
     top: 0;
-    backdrop-filter: blur(20px);
-    background-color: #00063069;
+    backdrop-filter: blur(30px);
+    background-color: #00063025;
     //background-color: rgba(0, 0, 0, 0.9);
 
     overflow-x: hidden;
@@ -166,7 +188,7 @@ img {
 
 .overlay-content {
     position: relative;
-    top: 25%;
+    top: 10%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
@@ -175,7 +197,7 @@ img {
 .overlay a {
     padding: 1rem;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 2rem;
     color: #ffffff;
     display: block;
     transition: 0.3s;
@@ -190,7 +212,7 @@ img {
     position: absolute;
     top: 0px;
     right: 20px;
-    font-size: 60px;
+    font-size: 3rem;
 }
 
 
