@@ -13,31 +13,38 @@
     </main>
 
     {%- include footer.html -%}
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="{{ base.url | prepend: site.url }}/assets/navbar.js"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js" integrity="sha512-CPA5LMoJI/a5HkSIAKcBtFXe4gqGjPUL2ExF/3PmhrrHI17wod9xOqqF+0WZQRKIIq0KwF8oG5BaiWobtrke3A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  
+
+
   <script>
     // gsap.registerPlugin(ScrollTrigger);
+
     var tl = gsap.timeline();
     var tl2 = gsap.timeline();
-    
+
     tl.from('.stagger', {
-      opacity:0,
-      y: -50, 
-      stagger: 0.005,
-      //ease: Power4.easeOut
+        opacity:0,
+        y: -50, 
+        stagger: 0.01,
+        ease: Bounce.easeOut
+
     })
 
-    tl2.from('.hero_title',  {
-      //y: '-30%',
-      opacity: 0,
-      duration: 1,
-      ease: Power4.easeIn
-    })
+    
 
+     tl2.from('.hero_title',  {
+        //y: '-30%',
+        opacity: 0,
+        duration: 1,
+        ease: Power4.easeIn
+    })
 
   </script>
+
   </body>
 
 </html>
