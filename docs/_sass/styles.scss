@@ -246,6 +246,20 @@ article {
     //filter: blur(1px);
 }
 
+.scroll-circle {
+    animation: circleAnim 1s alternate-reverse infinite;
+}
+
+@keyframes circleAnim {
+    from {
+        transform: translate(936px,  669px);
+        z-index: 5;
+    }
+    to {
+        transform: translate(936px,  651px);
+
+    }
+}
 .post-content {
     
     h1, h2, h3, p {
