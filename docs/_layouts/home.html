@@ -3,6 +3,13 @@ layout: default
 ---
 
 <div class="home">
+
+  <div class="glow"></div>
+
+  <div class="hero_img">
+    {%- include logo.html -%}
+  </div>
+
   <div class="hero">
     <div id="tite" class="hero_title">
       {%- if page.title -%}
@@ -10,44 +17,44 @@ layout: default
       {%- endif -%}
 
       {{ content }}
-
       <div class=scroll>
-        {%-  include scroll.html -%}
+        {%- include scroll.html -%}
       </div>
-  
-    </div>
-    <div class="glow"></div>
-    <div class="hero_img">
-      {%- include logo.html -%}
     </div>
   </div>
-  
-  {%- if site.posts.size > 0 -%}
+
+  <div class="featured">
+    {%- if site.posts.size > 0 -%}
     <h2 class="post-list-heading">{{ page.list_title | default: "Featured" }}</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
       <li>
         <div class="post-card">
-          <h3>
+        
             <a class="post-link" href="{{ post.url | relative_url }}">
               {{ post.title | escape }}
             </a>
-          </h3>
+        
 
           <ul class="post-category-list">
-          {%- for cat in post.categories -%}
-              <li class="post-category-item"> {{ cat }} </li>
-          {%- endfor -%}
+            {%- for cat in post.categories -%}
+            <li class="post-category-item"> {{ cat }} </li>
+            {%- endfor -%}
           </ul>
 
           {%- if site.show_excerpts -%}
-            <p> {{ post.excerpt }} </p>
+          <p> {{ post.excerpt }} </p>
           {%- endif -%}
+
+          <div class="crop">
+            <img src="{{ site.baseurl }}/assets/{{ post.image }}">
+          </div>
         </div>
       </li>
       {%- endfor -%}
     </ul>
 
-  {%- endif -%}
+    {%- endif -%}
+  </div>
 
 </div>

@@ -3,6 +3,7 @@
 
   {%- include head.html -%}
   {%- include overlay_navigation.html -%}
+
   <body>
 
     <main class="page-content" aria-label="Content">
@@ -12,7 +13,7 @@
       </div>
     </main>
 
-    {%- include footer.html -%}
+  {%- include footer.html -%}
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -21,6 +22,10 @@
 
 
   <script>
+
+    
+
+
     // gsap.registerPlugin(ScrollTrigger);
 
     var tl = gsap.timeline();
@@ -29,12 +34,10 @@
     tl.from('.stagger', {
         opacity:0,
         y: -50, 
-        stagger: 0.01,
+        stagger: 0.02,
         ease: Bounce.easeOut
 
     })
-
-    
 
      tl2.from('.hero_title',  {
         //y: '-30%',
